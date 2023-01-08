@@ -8,6 +8,22 @@ function Form() {
 		const phone = e.target.phone.value;
 		const password = e.target.password.value;
 		const confPassword = e.target.confPassword.value;
+        if(userName.length < 6){
+            alert("Username should be atleast 6 characters long");
+            return;
+        }
+        if(fullName.length < 3){
+            alert("Name should be atleast 3 characters long");
+            return;
+        }
+        if(phone.length !== 10){
+            alert("Phone number should be 10 digits long");
+            return;
+        }
+        if(password.length < 3){
+            alert("Password should be atleast 3 characters long");
+            return;
+        }
 		if(password !== confPassword)
         {
             // if 'password' and 'confirm password' does not match.
